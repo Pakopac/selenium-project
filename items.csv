@@ -1,19 +1,51 @@
-0,1
-Blue Cap,+0.7
-Number One,+1.5
-Odd Mushroom,+1.7
-Rosary,+0.5
-Screw,+0.5
-SMB Super Fan,+0.2
-The Halo,+0.2
-Toothpicks,+0.7
-Torn Photo,+0.7
-Binky,+0.75
-Eden's Blessing,+0.7
-Marked,+0.7
-Mr. Dolly,+0.7
-Analog Stick,+0.35
-Divorce Papers,+0.7
-A Bar of Soap,+0.5
-Paschal Candle,+0.4
-Sausage,+0.5
+name,damage,tears,range
+Abaddon,+1.5,,
+Capricorn,+0.5,,+0.75
+Cat-O-Nine-Tails,+1,,
+Dark Matter,+1,,
+Death's Touch,+1.5,,
+Godhead,+0.5,,
+Growth Hormones,+1,,
+Guillotine,+1,,
+Jesus Juice,+0.5,,+0.25
+Magic Mushroom,+0.3,,+1.5
+Odd Mushroom,+0.3,+1.7,+0.25
+Pentagram,+1,,
+SMB Super Fan,+0.3,+0.2,
+Synthoil,+1,,+5.25
+The Halo,+0.3,+0.2,+0.25
+The Mark,+1,,
+The Pact,+0.5,,
+Whore of Babylon,+1.5,,
+Maw of the Void,+1,,
+Dog Tooth,+0.3,,
+Dogma,+2,,
+Glass Eye,+0.75,,
+Heartbreak,+0.25,,
+Redemption,+1,,
+Sausage,+0.5,+0.5,+1.5
+Stye,+28%,,
+Blue Cap,,+0.7,
+Number One,,+1.5,
+Rosary,,+0.5,
+Screw,,+0.5,
+Toothpicks,,+0.7,
+Torn Photo,,+0.7,
+Binky,,+0.75,
+Eden's Blessing,,+0.7,
+Marked,,+0.7,
+Mr. Dolly,,+0.7,+5.25
+Analog Stick,,+0.35,
+Divorce Papers,,+0.7,
+A Bar of Soap,,+0.5,
+Paschal Candle,,+0.4,
+Blood Clot,,,+5
+Mom's Heels,,,+5.25
+Mom's Lipstick,,,+5.25
+Mom's Underwear,,,+5.25
+My Reflection,,,+1.5
+Roid Rage,,,+5.25
+Sacred Heart,,,+4.125
+Safety Pin,,,+5.25
+Mom's Pearls,,,+1.25
+Tropicamide,,,+1.5
