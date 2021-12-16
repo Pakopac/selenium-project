@@ -4,6 +4,7 @@ from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from selenium.webdriver.chrome.service import Service 
 import time
 import pandas as pd
 
@@ -83,7 +84,7 @@ def getStats(rows, typeStat):
 
 def getPage(url, element, typeStat):
     # Init driver
-    driver = webdriver.Remote("http://selenium:4444/wd/hub", DesiredCapabilities.FIREFOX)
+    driver = webdriver.Chrome()
 
     # Get item page
     driver.get(url)
@@ -125,7 +126,7 @@ tmpArrayCharacters = []
 
 def getPageCharacter():
     # Init driver
-    driver = webdriver.Remote("http://selenium:4444/wd/hub", DesiredCapabilities.FIREFOX)
+    driver = webdriver.Chrome()
 
     # Get character page
     driver.get("https://bindingofisaacrebirth.fandom.com/fr/wiki/Personnages")
