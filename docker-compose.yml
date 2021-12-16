@@ -1,0 +1,9 @@
+version: "3.6"
+services:
+  project:
+    build: ./project
+
+  selenium:
+    image: selenium/standalone-firefox:4.1.0-20211209
+    ports:
+    - 4444:4444

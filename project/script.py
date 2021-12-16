@@ -1,16 +1,9 @@
-"""
-Download chromedriver here: https://chromedriver.chromium.org/downloads
-And add exe file in this folder
-"""
-import os
-import sys
-os.path.dirname(sys.executable)
-
 # Import dependencies
 from selenium import webdriver
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import time
 import pandas as pd
 
@@ -18,9 +11,9 @@ import pandas as pd
 class Item:
     def __init__(self):
         self.name = ""
-        self.damage = ""
-        self.tears = ""
-        self.range = ""
+        self.damage = 0
+        self.tears = 0
+        self.range = 0
     
     # function to check if item with this name already exist
     def searchByName(self, name):
@@ -31,9 +24,9 @@ class Item:
 class Character:
     def __init__(self):
         self.name = ""
-        self.damage = ""
-        self.tears = ""
-        self.range = ""
+        self.damage = 0
+        self.tears = 0
+        self.range = 0
 
 # Create temporary array for items
 array = []
@@ -90,7 +83,7 @@ def getStats(rows, typeStat):
 
 def getPage(url, element, typeStat):
     # Init driver
-    driver = webdriver.Chrome()
+    driver = webdriver.Remote("http://selenium:4444/wd/hub", DesiredCapabilities.FIREFOX)
 
     # Get item page
     driver.get(url)
@@ -110,13 +103,10 @@ def getPage(url, element, typeStat):
 
 # Call the function to get page and wait before getting another page to simulate a real behaviour
 getPage("https://bindingofisaacrebirth.fandom.com/wiki/Damage", '//*[@id="mw-content-text"]/div/table[4]/tbody/tr', "damage")
-time.sleep(1)
 
 getPage("https://bindingofisaacrebirth.fandom.com/wiki/Tears",  '//*[@id="mw-content-text"]/div/table[5]/tbody/tr', "tears")
-time.sleep(1)
 
 getPage("https://bindingofisaacrebirth.fandom.com/wiki/Range",  '//*[@id="mw-content-text"]/div/table[4]/tbody/tr', "range")
-time.sleep(1)
 
 # Save items and characters into csv file
 def saveCsv(arraytmp, name):
@@ -135,7 +125,7 @@ tmpArrayCharacters = []
 
 def getPageCharacter():
     # Init driver
-    driver = webdriver.Chrome()
+    driver = webdriver.Remote("http://selenium:4444/wd/hub", DesiredCapabilities.FIREFOX)
 
     # Get character page
     driver.get("https://bindingofisaacrebirth.fandom.com/fr/wiki/Personnages")
